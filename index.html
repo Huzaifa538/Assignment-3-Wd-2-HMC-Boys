@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GitHub Spark Effect</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0f0f23;
+      overflow: auto;
+      font-family: sans-serif;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding-top: 30px;
+    }
+
+    .github-logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .input-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    #searchInput {
+      padding: 12px 18px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 2px solid #444;
+      outline: none;
+      background-color: #1c1c2b;
+      color: white;
+      width: 280px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    #searchInput:focus {
+      border-color: #ff00ff;
+      box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+    }
+
+    #search-btn {
+      margin-left: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background: linear-gradient(135deg, #ff00ff, #ffff00);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 10px #ff00ff;
+    }
+
+    #search-btn:hover {
+      background: linear-gradient(135deg, #ffff00, #ff00ff);
+      box-shadow: 0 0 25px #ff00ff, 0 0 35px #ffff00;
+      transform: scale(1.05);
+    }
+
+    #proCon {
+      margin: 30px auto;
+      max-width: 600px;
+      color: white;
+    }
+
+    .profile-card {
+      background-color: #1e1e2f;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .avatar img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .self h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .self h2 {
+      font-size: 16px;
+      color: #bbb;
+      margin: 4px 0 0;
+    }
+
+    .top-section button a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .top-section button {
+      background-color: #28a745;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .about {
+      margin: 15px 0;
+    }
+
+    .about h2 {
+      margin: 0 0 10px;
+    }
+
+    .status {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .status-item {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="github-logo" id="githubLogo" />
+  </div>
+
+  <div class="input-container">
+    <input type="text" placeholder="Enter GitHub username..." id="searchInput" />
+    <button id="search-btn">Search</button>
+  </div>
+
+  <div id="proCon"></div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
